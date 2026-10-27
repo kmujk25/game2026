@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eef3f8">
+<title>한붓그리기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="menu" class="screen">
+  <h1>한붓그리기</h1>
+  <p class="sub">펜을 떼지 않고 모든 선을 한 번씩만 지나가세요</p>
+  <div id="grid"></div>
+</main>
+
+<main id="game" class="screen" hidden>
+  <header>
+    <button id="btnMenu" class="ic" aria-label="레벨 목록">☰</button>
+    <div class="ttl"><b id="lvTitle"></b><span id="count"></span></div>
+    <span class="ic spacer"></span>
+  </header>
+  <div class="board"><svg id="svg" viewBox="0 0 100 100" aria-label="퍼즐 판"></svg></div>
+  <p id="msg" class="msg">점을 눌러 시작하세요. 드래그하거나 차례로 탭해도 돼요.</p>
+  <nav class="bar">
+    <button id="btnUndo">되돌리기</button>
+    <button id="btnReset">다시 시작</button>
+    <button id="btnHint">힌트</button>
+    <button id="btnSol">정답 보기</button>
+  </nav>
+</main>
+
+<div id="win" class="overlay" hidden>
+  <div class="card">
+    <h2 id="winTitle">클리어!</h2>
+    <p id="winText"></p>
+    <button id="btnNext" class="primary">다음 레벨</button>
+    <button id="btnWinMenu">레벨 목록</button>
+  </div>
+</div>
+
+<script src="levels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
